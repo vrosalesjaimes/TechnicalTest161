@@ -14,7 +14,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 }
 
 h1,
@@ -93,7 +93,7 @@ button:focus:not(:focus-visible) {
 	white-space: nowrap;
 }
 
-.dark-theme{
+.dark-theme {
 	background-color: #273d44;
 	color: #e7e9eb;
 }

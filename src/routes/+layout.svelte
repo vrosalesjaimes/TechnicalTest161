@@ -1,21 +1,15 @@
 <script>
-	import './styles.css';
-    import Nav from './nav.svelte';
-	import Counter from './counter.svelte';
+	import "./styles.css";
+	import AllRespondents from "./panel.svelte";
 </script>
 
 <div class="app">
-	<div class="header">
-		<Nav/>
-		<Counter/>
-	</div>
-
 	<main>
+		<AllRespondents />
 		<slot />
 	</main>
 
-	<footer>
-	</footer>
+	<footer />
 </div>
 
 <style>
@@ -24,8 +18,6 @@
 		flex-direction: column;
 		min-height: 100vh;
 		width: 90%;
-		margin: 1em;
-		padding: 1em;
 	}
 
 	main {
@@ -45,12 +37,6 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
-	}
-
-	.header{
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
 	}
 
 	footer a {

@@ -1,14 +1,20 @@
+<script>
+    export let responses;
+</script>
+
 <div class="participation">
-    <p>10000</p> responses
+    <p>{responses}</p>
+     responses
 </div>
 
 <style>
-    .participation{
+    .participation {
         padding: 1em;
         color: #838c95;
+        min-width: max-content;
     }
 
-    .participation > p{
+    .participation > p {
         font-family: "Roboto Slab";
         display: inline;
         margin: 0;
