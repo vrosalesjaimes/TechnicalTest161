@@ -2,6 +2,7 @@ import * as d3 from "d3";
 
 export function renderChart(data, usePercentage, className) {
     if (data.length === 0) return; // Esperar hasta que se carguen los datos
+    const options = { style: 'decimal', minimumFractionDigits: 0, maximumFractionDigits: 0 };
 
     // Configuración del gráfico
     const chartContainer = d3.select(`.${className}`);
@@ -61,7 +62,7 @@ export function renderChart(data, usePercentage, className) {
         .classed("data-label", true)
         .style("font-weight", "bold")
         .style("padding", "0 0 0 10px")
-        .text((d) => (usePercentage ? `${d.percentage}%` : `${d.responses}`));
+        .text((d) => (usePercentage ? `${d.percentage}%` : `${d.responses.toLocaleString(undefined, options)}`));
 
     // Aplicar media query para cambiar la disposición en pantallas pequeñas
     const mediaQuery = window.matchMedia("(max-width: 640px)");
