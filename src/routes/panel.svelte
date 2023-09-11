@@ -45,7 +45,6 @@
         renderChart(data, usePercentage, currentContainer);
         usePercentage = true;
         responses = numberResponses;
-        console.log(responses);
     }
 </script>
 
