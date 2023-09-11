@@ -1,17 +1,20 @@
 <script>
-	import Header from './Header.svelte';
 	import './styles.css';
+    import Nav from './nav.svelte';
+	import Counter from './counter.svelte';
 </script>
 
 <div class="app">
-	<Header />
+	<div class="header">
+		<Nav/>
+		<Counter/>
+	</div>
 
 	<main>
 		<slot />
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</footer>
 </div>
 
@@ -20,6 +23,9 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		width: 90%;
+		margin: 1em;
+		padding: 1em;
 	}
 
 	main {
@@ -39,6 +45,12 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
+	}
+
+	.header{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 
 	footer a {
