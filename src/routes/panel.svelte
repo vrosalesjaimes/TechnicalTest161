@@ -8,7 +8,7 @@
     // @ts-ignore
     import * as d3 from "d3";
 
-    let URL = "http://localhost:8080/respondents/all";
+    let URL = "https://technicaltest161.onrender.com/respondents/all";
 
     // @ts-ignore
     let data = [];
@@ -34,7 +34,7 @@
     const dispatcher = createEventDispatcher();
 
     async function handleLinkClick(url, containerName, numberResponses) {
-        URL = `http://localhost:8080${url}`;
+        URL = `https://technicaltest161.onrender.com${url}`;
         currentContainer = containerName;
         currentLink = containerName;
 
